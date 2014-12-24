@@ -32,5 +32,8 @@
     // @include rotateY(45deg, 600);
     // @include perspective(600px);
     // @include transform(translate(300px, 300px) perspective(400px) rotateX(50deg) rotateY(10deg) rotateZ(-60deg));
-  }  
+  }
+  .thumbnail.pull-right {
+    margin: 0 0 10px 10px;
+  }
 }

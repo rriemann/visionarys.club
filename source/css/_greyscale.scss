@@ -131,7 +131,7 @@ a {
   // background: $grayscale-dark url(../img/intro-bg.jpg) no-repeat scroll bottom center;  
   // https://www.flickr.com/photos/schopohl/14459206184/in/photolist-bu2Xw7-nMbZQd-pCSBdN-fknkLS-7e2wKY-ooXmFa-a22yV9-dXMetY-oALfJW-dPxLLQ-cYyok-cJ57g9-8dAJVh-2HpYEQ-fVUJYz-cQajkf-dBfJNb-5nfUgB-5TjZCg-8dxygR-K2vLx-fNDikU-gLyPFs-4QaEB5-f3sjMA-ftPRBM-dPs9ir-azL2kB-cDR2k3-6WN22h-o6Bmd-57HVaj-5wbEYY-aKGrFi-5GggpQ-o2Hdfm-f3XNQ1-ftPxvg-ftPBee-8Lsx6g-4PWcBi-8dAMnj-2HpZem-9neVzb-dFDps7-dFxYtp-cEXidb-cEXj2Y-e1BgkG-ftQ3yP
   // https://www.flickr.com/photos/kuemmi/4816365385/in/photolist-8kB8Cv-DL3Je-pX1vCd-4wwyJr-oxmuQs-8s6Bhp-ovw12E-oYz7HU-dbHPWf-6qrL18-5yBMGH-6NwqCF-251QYK-pczG27-8Tq99s-5EUFC3-4AGiku-678xWS-p7gCMF-adW52D-acq3aR-ofZu3s-e72WjG-acq3rH-acq2gH-3EBjGi-cQuMSQ-39EyRn-asZ6Zh-484bsD-Luhij-oxvGp9-dvB6H4-3EBjhe-pgt7cM-sdkm6-eTZyfA-oNjyED-og477z-dvBgDD-anvATk-e6TbpK-oxkuwy-6q74DY-nbxWwZ-dq2jud-7N69MN-24LkT1-diQ1NX-sBVpc
-  background: $grayscale-dark url(../img/4816365385_f29c33b6b7_b.jpg) no-repeat scroll bottom center;
+  background: $grayscale-dark url(/img/4816365385_f29c33b6b7_b.jpg) no-repeat scroll bottom center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -191,11 +191,11 @@ a {
   padding-top: 100px;
 }
 
-.download-section {
+.links-section {
   width: 100%;
   padding: 50px 0;
   color: $grayscale-light;
-  background: $grayscale-dark url(../img/downloads-bg.jpg) no-repeat scroll center center;
+  background: $grayscale-dark url(/img/2396881866_desy.jpg) no-repeat scroll center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -213,7 +213,7 @@ a {
     padding-top: 250px;
   }
 
-  .download-section {
+  .links-section {
     padding: 100px 0;
   }
 
