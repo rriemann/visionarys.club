@@ -10,26 +10,28 @@ require "./source/environment_variables.rb"
 # ========================================================================
 # Site settings
 # ========================================================================
-set :site_title,            "Middleman Site"
-set :site_description,      "This is an example meta description."
+set :site_title,            "riemann.berlin"
+set :site_description,      "Website of the family Riemann in Berlin"
 set :site_url_production,   ENV['site_url_production']
 set :site_url_development,  ENV['site_url_development']
 set :css_dir,               'css'
 set :js_dir,                'js'
 set :images_dir,            'img'
 set :fonts_dir,             'fonts'
-set :sass, line_comments: false, style: :nested
 
 # Sitemap URLs (use trailing slashes)
 set :url_sample,            "/sample/"
 # Place additional URLs here...
 
 # Sitemap XML
-require "builder"
-page "/sitemap.xml", :layout => false
+# require "builder"
+# page "/sitemap.xml", :layout => false
+ignore "/sitemap.xml"
 
 # Slim template engine
 require "slim"
+
+require "date"
 
 # Internationalization
 activate :i18n
@@ -93,33 +95,6 @@ helpers do
     partial "_partials/#{partial_filename}"
   end
 
-  # Formats li item, and determines when to put class=active on li element
-  # (according to Bootstrap >3.1.1 spec)
-  def nav_li(label, url, css_class="", icon="")
-
-    # Determine if icon is specified
-    nav_icon = ""
-    unless icon.nil? or icon.empty?
-      nav_icon = " <i class='fa #{icon}'></i>"
-    end
-
-    # Normalize name string for use as HTML class
-    li_classes = ""
-    unless css_class.nil? or css_class.empty?
-      # Assign processed name to variable
-      li_classes = "#{css_class}"
-    else
-      label_formatted = label.downcase.tr(" ", "-")
-      li_classes = "nav-item-#{label_formatted}"
-    end
-
-    if current_page.url == url
-      li_classes += " active"
-    end
-
-    "<li class='#{li_classes}'><a href='#{url}'>#{label}#{nav_icon}</a></li>"
-  end
-
 end
 
 
@@ -128,6 +103,16 @@ end
 # ========================================================================
 configure :development do
   set :site_url, "#{site_url_development}"
+  set :sass, line_comments: false, style: :nested
+  
+  set :slim, {
+    # :format  => :html5,
+    # :attr_wrapper => '"',
+    # :attr_delims => {'(' => ')', '[' => ']'}, # removed '{' => '}' from default
+    :indent => '    ',
+    :pretty => true,
+    :sort_attrs => false
+  }
 end
 
 # ========================================================================
@@ -137,7 +122,7 @@ configure :build do
   set :site_url, "#{site_url_production}"
   set :sass, style: :compressed
   
-  activate :minify_css
+  # activate :minify_css
   activate :minify_html
   activate :minify_javascript
   activate :gzip
@@ -174,4 +159,13 @@ configure :build do
       { icon: "mstile-144x144", format: "png" },
     ]
   }
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = "rriemann.rigel.uberspace.de"
+  deploy.path   = "/var/www/virtual/rriemann/riemann.berlin"
+  # deploy.build_before = true # default: false
+  # deploy.method   = :ftp
+  deploy.clean = true # remove orphaned files on remote host, default: false
 end

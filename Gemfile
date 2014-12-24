@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+source 'https://rails-assets.org'
 
 # Core
 gem "middleman", "3.3.7"
@@ -6,6 +7,8 @@ gem "middleman", "3.3.7"
 # Assets
 gem "bootstrap-sass", "~> 3.3.1.0", require: false
 gem "font-awesome-middleman", "~> 4.2.3"
+gem "rails-assets-jquery.easing", "~> 1.3.1"
+gem 'rails-assets-Hover', '1.0.9'
 gem "middleman-favicon-maker", "~> 3.7"
 
 # Templating
@@ -20,4 +23,5 @@ gem "builder", "~> 3.2.2"
 gem "middleman-sitemap", "~> 0.0.13"
 
 gem "middleman-livereload", "~> 3.3.4"
+gem "middleman-deploy", "~> 1.0.0"
 gem "oj", "~> 2.11.1"

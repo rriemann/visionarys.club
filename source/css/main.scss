@@ -4,11 +4,14 @@
  * Imports / Includes
  * ========================================================================== */
 
+// @import "hover/hover";
 @import "_font-awesome-includes"; // Font Awesome icon library
+@import "_variables-greyscale";   // Import for theme
 @import "_variables";             // Bootstrap variable overrides
 @import "_mixins";                // Custom mixins
 @import "_globals";               // Global elements
 @import "_bootstrap-includes";    // Bootstrap core
+@import "_greyscale";             // Import for theme
 
 
 /* ==========================================================================

@@ -1,4 +1,31 @@
-nav.navbar.navbar-default
+/! Navigation
+nav.navbar.navbar-custom.navbar-fixed-top role="navigation" 
+  .container
+    .navbar-header
+      button.navbar-toggle data-target=".navbar-main-collapse" data-toggle="collapse" type="button" 
+        i.fa.fa-bars
+      a.navbar-brand.page-scroll href="#page-top" 
+        i.fa.fa-play-circle>
+        span.light> Start
+        | Bootstrap
+    /! Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+      ul.nav.navbar-nav
+        /! Hidden li included to remove active class from about link when scrolled up past about section
+        li.hidden
+          a href="#page-top" 
+        li
+          a.page-scroll href="#about"  About
+        li
+          a.page-scroll href="#download"  Download LESS
+        li
+          a.page-scroll href="#contact"  Contact Start Bootstrap
+        li
+          a.page-scroll href="#download2"  Download SASS
+        li
+          a.page-scroll href="#contact2"  Contact Blackfyre
+
+/! nav.navbar.navbar-default
   .container-fluid
     .navbar-header
       button.navbar-toggle data-target="#primary-navigation" data-toggle="collapse" type="button"
