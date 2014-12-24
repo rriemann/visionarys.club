@@ -28,6 +28,7 @@ activate :relative_assets
 
 # Pretty URLs
 activate :directory_indexes
+set :trailing_slash, true
 
 # Autoprefixer
 activate :autoprefixer do |config|
@@ -105,7 +106,7 @@ configure :build do
   activate :gzip
   
   # Enable cache buster
-  activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
+  activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif', '.js']
 
   # Ignore files/dir during build process
   ignore "favicon_template.png"

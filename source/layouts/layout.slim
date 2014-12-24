@@ -18,11 +18,21 @@ html.no-js
       meta content="#{current_page.data.meta_description}" name="description"
     - else
       meta content="#{site_description}" name="description"
+      
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png"
+    link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"
+    == "\n"
+    == "\n"
+    link rel="icon" type="image/ico" sizes="16x16" href="/favicon.ico"
+    link rel="shortcut icon" type="image/png" href="/favicon.png"
     / Canonical URL
     link href="#{site_url+current_page.url}" rel="canonical"
     link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"
     link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"
-    == stylesheet_link_tag "main"
+    == stylesheet_link_tag "main", media: :all
 
   body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
     /[if lte IE 8]
