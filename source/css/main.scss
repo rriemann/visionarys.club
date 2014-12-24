@@ -21,3 +21,16 @@
  * @media screen and (min-width: $screen-md-min) {}
  * @media screen and (min-width: $screen-lg-min) {}
 */
+
+/*
+*/
+@import "compass/css3/transform";
+
+@media screen and (min-width: $screen-lg-min) {
+  h1.brand-heading {
+    // font-size: 120px;
+    // @include rotateY(45deg, 600);
+    // @include perspective(600px);
+    // @include transform(translate(300px, 300px) perspective(400px) rotateX(50deg) rotateY(10deg) rotateZ(-60deg));
+  }  
+}

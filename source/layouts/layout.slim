@@ -8,30 +8,39 @@ html.no-js
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="index,follow" name="robots"
-    // Check frontmatter title; fallback to value in config.rb
+    / Check frontmatter title; fallback to value in config.rb
     - if current_page.data.title
       title #{site_title} | #{current_page.data.title}
     - else
       title #{site_title}
-    // Check frontmatter meta description; fallback to value in config.rb
+    / Check frontmatter meta description; fallback to value in config.rb
     - if current_page.data.meta_description
       meta content="#{current_page.data.meta_description}" name="description"
     - else
       meta content="#{site_description}" name="description"
-    // Canonical URL
+    / Canonical URL
     link href="#{site_url+current_page.url}" rel="canonical"
     link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"
     link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"
     == stylesheet_link_tag "main"
 
-  body class="#{page_classes}" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
+  body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
     /[if lte IE 8]
       p.chromeframe.alert.alert-warning
         | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    == _partial "navigation"
-    == _partial "header"
+    == partial "partials/navigation"
+    == partial "partials/header"
     == yield
+    / Footer
     footer
       .container.text-center
         p Copyright &copy; Robert Riemann #{Date.today.year}
-    == javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false", "main.js"
+        p
+          ' Metro Photo
+          a> href="https://www.flickr.com/photos/kuemmi/4816365385"  Christoph Kummer/Flickr
+          a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" Creative Commons by-nc-sa 2.0
+        p
+          ' Template
+          a> href="http://blackfyre.github.io/grayscale-sass/" Grayscale
+          | by blackyre/github
+    == javascript_include_tag "main.js"

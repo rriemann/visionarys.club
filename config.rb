@@ -1,36 +1,23 @@
 # ========================================================================
-# Hello Jason
-# http://hellojason.net
-# ========================================================================
-
-# Copy ./source/environment_variables.example to ./source/environment_variables.rb
-# then update settings there.
-require "./source/environment_variables.rb"
-
-# ========================================================================
 # Site settings
 # ========================================================================
 set :site_title,            "riemann.berlin"
 set :site_description,      "Website of the family Riemann in Berlin"
-set :site_url_production,   ENV['site_url_production']
-set :site_url_development,  ENV['site_url_development']
+set :site_url_production,   "riemann.berlin"
+set :site_url_development,  "0.0.0.0:4567"
 set :css_dir,               'css'
 set :js_dir,                'js'
 set :images_dir,            'img'
 set :fonts_dir,             'fonts'
 
-# Sitemap URLs (use trailing slashes)
-set :url_sample,            "/sample/"
-# Place additional URLs here...
-
 # Sitemap XML
-# require "builder"
-# page "/sitemap.xml", :layout => false
-ignore "/sitemap.xml"
+require "builder"
+page "/sitemap.xml", :layout => false
 
 # Slim template engine
 require "slim"
 
+# necessary for copyright in footer
 require "date"
 
 # Internationalization
@@ -88,16 +75,6 @@ activate :livereload
 #   end
 # end
 
-helpers do
-
-  # Gets partials from the _partials directory
-  def _partial(partial_filename)
-    partial "_partials/#{partial_filename}"
-  end
-
-end
-
-
 # ========================================================================
 # Development-specific configuration
 # ========================================================================
@@ -131,8 +108,6 @@ configure :build do
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
 
   # Ignore files/dir during build process
-  ignore "environment_variables.rb"
-  ignore "environment_variables.rb.sample"
   ignore "favicon_template.png"
   ignore "sitemap.yml"
   
