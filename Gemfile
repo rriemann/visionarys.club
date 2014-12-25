@@ -8,7 +8,8 @@ gem "middleman", "3.3.7"
 gem "bootstrap-sass", "~> 3.3.1.0", require: false
 gem "font-awesome-middleman", "~> 4.2.3"
 gem "rails-assets-jquery.easing", "~> 1.3.1"
-gem 'rails-assets-Hover', '1.0.9'
+gem 'rails-assets-Hover', '~> 1.0.9'
+gem 'rails-assets-Wallpaper', '~> 3.1.18'
 gem "middleman-favicon-maker", "~> 3.7"
 
 # Templating

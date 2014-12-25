@@ -137,11 +137,11 @@ configure :build do
   }
 end
 
-activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.host   = "rriemann.rigel.uberspace.de"
-  deploy.path   = "/var/www/virtual/rriemann/riemann.berlin"
-  # deploy.build_before = true # default: false
-  # deploy.method   = :ftp
-  deploy.clean = true # remove orphaned files on remote host, default: false
-end
+# activate :deploy do |deploy|
+#   deploy.method = :rsync
+#   deploy.host   = "rriemann.rigel.uberspace.de"
+#   deploy.path   = "/var/www/virtual/rriemann/riemann.berlin"
+#   # deploy.build_before = true # default: false
+#   # deploy.method   = :ftp
+#   deploy.clean = true # remove orphaned files on remote host, default: false
+# end
