@@ -1,9 +1,9 @@
 # ========================================================================
 # Site settings
 # ========================================================================
-set :site_title,            "riemann.berlin"
-set :site_description,      "Website of the family Riemann in Berlin"
-set :site_url_production,   "riemann.berlin"
+set :site_title,            "Visionary's Club"
+set :site_description,      "Website of the Visionary's Club"
+set :site_url_production,   "visionarys.club"
 set :site_url_development,  "0.0.0.0:4567"
 set :css_dir,               'css'
 set :js_dir,                'js'
@@ -81,7 +81,7 @@ activate :livereload
 # ========================================================================
 configure :development do
   set :site_url, "#{site_url_development}"
-  set :sass, line_comments: false, style: :nested
+  set :sass, :sourcemap => :inline, style: :nested
   
   set :slim, {
     # :format  => :html5,
@@ -137,11 +137,11 @@ configure :build do
   }
 end
 
-# activate :deploy do |deploy|
-#   deploy.method = :rsync
-#   deploy.host   = "rriemann.rigel.uberspace.de"
-#   deploy.path   = "/var/www/virtual/rriemann/riemann.berlin"
-#   # deploy.build_before = true # default: false
-#   # deploy.method   = :ftp
-#   deploy.clean = true # remove orphaned files on remote host, default: false
-# end
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = "rriemann.rigel.uberspace.de"
+  deploy.path   = "/var/www/virtual/rriemann/visionarys.club"
+  # deploy.build_before = true # default: false
+  # deploy.method   = :ftp
+  deploy.clean = true # remove orphaned files on remote host, default: false
+end

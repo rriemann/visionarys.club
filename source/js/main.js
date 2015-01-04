@@ -8,9 +8,10 @@
 //= require _bootstrap
 //= require _grayscale
 
-$("#wallpaper").wallpaper({
-        source: {
-                // poster: "path/to/poster.jpg",
-                video: "//www.youtube.com/embed/vLUNWYt3q1w"
-        }
+$(".video-bg").wallpaper({
+  source: {
+    // poster: "path/to/poster.jpg",
+    // video: "//www.youtube.com/embed/vLUNWYt3q1w"
+    video: "//www.youtube.com/embed/J25CjWf61ks"
+  }
 });

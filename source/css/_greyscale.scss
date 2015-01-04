@@ -2,8 +2,8 @@ body {
   width: 100%;
   height: 100%;
   font-family: $grayscale-body-font-family;
-  color: $grayscale-light;
-  background-color: $grayscale-dark;
+  // color: $grayscale-light;
+  // background-color: $grayscale-dark;
 }
 
 html {
@@ -75,7 +75,7 @@ a {
       }
     }
   }
-  a {
+  a, .navbar-toggle {
     color: $grayscale-light;
   }
   .nav {
@@ -108,7 +108,6 @@ a {
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
-    background-color: transparentize($grayscale-dark, 0.7);
   }
 
   .top-nav-collapse {
@@ -117,7 +116,7 @@ a {
   }
 
   .navbar-custom.top-nav-collapse {
-    border-bottom: 1px solid transparentize($grayscale-light, 0.7);
+    // border-bottom: 1px solid transparentize($grayscale-light, 0.7);
   }
 }
 
@@ -128,16 +127,11 @@ a {
   padding: 100px 0;
   text-align: center;
   color: $grayscale-light;
-  // background: $grayscale-dark url(../img/intro-bg.jpg) no-repeat scroll bottom center;  
-  // https://www.flickr.com/photos/schopohl/14459206184/in/photolist-bu2Xw7-nMbZQd-pCSBdN-fknkLS-7e2wKY-ooXmFa-a22yV9-dXMetY-oALfJW-dPxLLQ-cYyok-cJ57g9-8dAJVh-2HpYEQ-fVUJYz-cQajkf-dBfJNb-5nfUgB-5TjZCg-8dxygR-K2vLx-fNDikU-gLyPFs-4QaEB5-f3sjMA-ftPRBM-dPs9ir-azL2kB-cDR2k3-6WN22h-o6Bmd-57HVaj-5wbEYY-aKGrFi-5GggpQ-o2Hdfm-f3XNQ1-ftPxvg-ftPBee-8Lsx6g-4PWcBi-8dAMnj-2HpZem-9neVzb-dFDps7-dFxYtp-cEXidb-cEXj2Y-e1BgkG-ftQ3yP
-  // https://www.flickr.com/photos/kuemmi/4816365385/in/photolist-8kB8Cv-DL3Je-pX1vCd-4wwyJr-oxmuQs-8s6Bhp-ovw12E-oYz7HU-dbHPWf-6qrL18-5yBMGH-6NwqCF-251QYK-pczG27-8Tq99s-5EUFC3-4AGiku-678xWS-p7gCMF-adW52D-acq3aR-ofZu3s-e72WjG-acq3rH-acq2gH-3EBjGi-cQuMSQ-39EyRn-asZ6Zh-484bsD-Luhij-oxvGp9-dvB6H4-3EBjhe-pgt7cM-sdkm6-eTZyfA-oNjyED-og477z-dvBgDD-anvATk-e6TbpK-oxkuwy-6q74DY-nbxWwZ-dq2jud-7N69MN-24LkT1-diQ1NX-sBVpc
-  /*
-  background: $grayscale-dark url(/img/4816365385_f29c33b6b7_b.jpg) no-repeat scroll bottom center;
+  background: $grayscale-dark url(../img/intro-bg.jpg) no-repeat scroll bottom center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  */
   .intro-body {
     display: table-cell;
     vertical-align: middle;
@@ -188,16 +182,15 @@ a {
   }
 }
 
-
 .content-section {
   padding-top: 100px;
 }
 
-.links-section {
+.download-section {
   width: 100%;
   padding: 50px 0;
   color: $grayscale-light;
-  background: $grayscale-dark url(/img/2396881866_desy.jpg) no-repeat scroll center center;
+  background: $grayscale-dark url(../img/downloads-bg.jpg) no-repeat scroll center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -215,7 +208,7 @@ a {
     padding-top: 250px;
   }
 
-  .links-section {
+  .download-section {
     padding: 100px 0;
   }
 
@@ -235,7 +228,7 @@ a {
 }
 
 .btn-default {
-  @include button-variant($grayscale-primary, transparentize(white, 1), $grayscale-primary);
+  @include button-variant($grayscale-primary, transparent, $grayscale-primary);
 
   &:hover,
   &:focus {

@@ -2,49 +2,70 @@
 changefreq: weekly
 priority: 1
 ---
+/ Navigation
+nav.navbar.navbar-custom.navbar-fixed-top role="navigation" 
+  .container
+    .navbar-header
+      button.navbar-toggle data-target=".navbar-main-collapse" data-toggle="collapse" type="button" 
+        i.fa.fa-bars
+      a.navbar-brand.page-scroll href="#page-top" 
+        i.fa.fa-play-circle>
+        span.light> Visionary's
+        span.text-primary Club
+    / Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+      ul.nav.navbar-nav
+        / Hidden li included to remove active class from about link when scrolled up past about section
+        li.hidden
+          a href="#page-top" 
+        li
+          a.page-scroll href="#family"  Family
+        li
+          a.page-scroll href="#links" Links
+        li
+          a.page-scroll href="#contact"  Contact
+          
+          
+/! Intro Header
+/ header.intro
+  .intro-body#wallpaper
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          h1.brand-heading Riemann
+          p.intro-text
+            | in Berlin
+          a.btn.btn-circle.page-scroll.pulse href="#family" 
+            i.fa.fa-angle-double-down
+            
+header.video-bg
+  .intro-video.intro-dark-bg.container
+    .overlay
+    .intro-body
+      .container
+        h1.brand-heading
+          span.light> Visionary's
+          span.text-primary Club
+        hr.light/
+        .carousel.slide data-ride="carousel" 
+          .carousel-inner
+            .item.active
+              h4 Spectrum is a One Page Website Framework
+            .item
+              h4 Easy to Use and Easy to Customize
+            .item
+              h4 Full Documentation and Support is Included
+        a.btn.btn-scroll-light.page-scroll.sink href="#family" 
+            i.fa.fa-angle-double-down
+
+
 / Family Section
 section#family.container.content-section
   .row
     .col-lg-8.col-lg-offset-2
-      markdown:
-        ## Family
-        
-        
-        <div class="thumbnail col-lg-5 pull-right img-responsive">
-          <img class="img-responsive" src="img/emblem.png" alt="Familienwappen"/>
-          <div class="caption">
-            Familienwappen, &copy; Tord Riemann 2008
-          </div>
-        </div>
-        
-        This is the website of the Riemann family mostly based in Berlin. We are
-        likely not related to the mathematician [Bernhard Riemann](//de.wikipedia.org/wiki/Bernhard_Riemann).
-        The musician, scientist and composer [Hugo Riemann](//de.wikipedia.org/wiki/Hugo_Riemann)
-        (1849-1919) however is our ancestor.
-        
-        Robert Riemann (1877-1962), a son of Hugo Riemann, has taken hand-written
-        chronicles that have been left unnoticed for many decades, even though he
-        was probably not reluctant to its publication. His son, the lawyer Tord
-        Hugo Riemann (1925-1992) has passed his belongings to his longtime companion
-        Vera Loebner who has been so generous to allocate all personal documents to
-        his childs (with [Käthe Riemann](//de.wikipedia.org/wiki/K%C3%A4the_Riemann), 
-        1928-2000) Tord Robert, Carmen-Thurid, and Raoul Robert.
-        
-        Since 1989, few requests regarding the family history of Hugo Riemann have
-        reached us. A notable result is the German biography "Hugo Riemann
-        (1849-1919) - Leben, Werk und Wirkung" (Concerto Verlag, Köln, 1999) by
-        Mr. Dr. Michael Arntz. As a result of this interest, the idea grow to
-        make the Robert Riemanns script "Dummheit und Einsicht - Aus meinem Leben"
-        (engl.: Foolishness and Insight – out of my life) available to the public.
-        The second out of sixteen chapters is dedicated to "Hugo Riemann" and should
-        be published [first](http://hugo-riemann.de/For-2009/Bio-Rob-Riemann-2-HugoRiemann.pdf).
-        
-        More information is available in German at [hugo-riemann.de](http://hugo-riemann.de/#Kapitel-02).
-        
-        In 2003, the English speaking book [Hugo Riemann and the Birth of Modern
-        Musical Thought](http://dx.doi.org/10.1017/CBO9780511481369) was published
-        by Alexander Rehding.  
-
+      h2 Idea
+      - 8.times do
+        p= lorem.paragraphs 1
 / Links Section
 section#links.content-section
   .links-section
@@ -53,12 +74,7 @@ section#links.content-section
         markdown:
           ## Links
           
-          Find some further links to members of our family (by chance all physicians).
-          
-          [Tord Riemann](http://www-zeuthen.desy.de/~riemann/){:.btn.btn-default}
-          [Sabine Riemann](http://www-zeuthen.desy.de/~riemanns/){:.btn.btn-default}
-          [Robert Riemann](http://riemann.cc){:.btn.btn-default}
-        
+          [aen](#){:.btn.btn-default}
 / Contact Section
 section#contact.container.content-section
   .row
@@ -68,18 +84,18 @@ section#contact.container.content-section
       
         Feel free to email us!
       
-        [robert@riemann.berlin](mailto:robert@riemann.berlin){:.btn.btn-default}
+        [mail@visionarys.club](mailto:mail@visionarys.club){:.btn.btn-default}
 
-      / ul.list-inline.banner-social-buttons
+      ul.list-inline.banner-social-buttons
         li
-          a.btn.btn-default.btn-lg href="https://twitter.com/SBootstrap" 
+          a.btn.btn-default.btn-lg href="https://twitter.com/visionarysclub" 
             i.fa.fa-twitter.fa-fw
             span.network-name Twitter
-        li
+        / li
           a.btn.btn-default.btn-lg href="https://github.com/IronSummitMedia/startbootstrap" 
             i.fa.fa-github.fa-fw
             span.network-name Github
         li
-          a.btn.btn-default.btn-lg href="https://plus.google.com/+Startbootstrap/posts" 
+          a.btn.btn-default.btn-lg href="https://plus.google.com/108257257777211877738/" 
             i.fa.fa-google-plus.fa-fw
             span.network-name Google+
