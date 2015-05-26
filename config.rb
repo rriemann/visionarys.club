@@ -31,11 +31,11 @@ activate :directory_indexes
 set :trailing_slash, true
 
 # Autoprefixer
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.cascade  = false
-  config.inline   = false
-end
+# activate :autoprefixer do |config|
+#   config.browsers = ['last 2 versions', 'Explorer >= 9']
+#   config.cascade  = false
+#   config.inline   = false
+# end
 
 # ========================================================================
 # Page options, layouts, aliases and proxies
@@ -82,7 +82,7 @@ activate :livereload
 configure :development do
   set :site_url, "#{site_url_development}"
   set :sass, :sourcemap => :inline, style: :nested
-  
+
   set :slim, {
     # :format  => :html5,
     # :attr_wrapper => '"',
@@ -99,19 +99,19 @@ end
 configure :build do
   set :site_url, "#{site_url_production}"
   set :sass, style: :compressed
-  
+
   # activate :minify_css
   activate :minify_html
   activate :minify_javascript
   activate :gzip
-  
+
   # Enable cache buster
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif', '.js']
 
   # Ignore files/dir during build process
   ignore "favicon_template.png"
   ignore "sitemap.yml"
-  
+
   # Create favicon and device-specific icons
   activate :favicon_maker, :icons => {
     "favicon_template.png" => [

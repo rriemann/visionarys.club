@@ -5,16 +5,17 @@ source 'https://rails-assets.org'
 gem "middleman", "3.3.7"
 
 # Assets
-gem "bootstrap-sass", "~> 3.3.1.0", require: false
+gem "bootstrap-sass", "~> 3.3.4", require: false
 gem "font-awesome-middleman", "~> 4.2.3"
 gem "rails-assets-jquery.easing", "~> 1.3.1"
 gem 'rails-assets-Hover', '~> 1.0.9'
 gem 'rails-assets-Wallpaper', '~> 3.1.18'
+gem 'rails-assets-jquery.stellar', '~> 0.6.2'
 gem "middleman-favicon-maker", "~> 3.7"
 
 # Templating
 gem "slim", "~> 3.0.1"
-gem "middleman-autoprefixer", "~> 2.3.0"
+# gem "middleman-autoprefixer", "~> 2.3.0"
 
 # Optimization & minification
 gem "middleman-jquery", "~> 2.1.1"
