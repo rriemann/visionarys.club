@@ -20,7 +20,8 @@ $(".video-bg").background({
     // video: "//www.youtube.com/embed/J25CjWf61ks" yesmite (werbung)
     // video: "//www.youtube.com/embed/1HZ0iSwqsWA"
     // video: "//www.youtube.com/embed/oaU9ZhAi6oU" video background south america
-    video: "//www.youtube.com/embed/fb4dpcIYTrc" // night vision cities europe
+    poster: "/img/20120521-yosemite-327.jpg", // http://www.projectyose.com/ https://vimeo.com/87701971
+    // video: "//www.youtube.com/embed/fb4dpcIYTrc" // night vision cities europe
   }
 });
 
