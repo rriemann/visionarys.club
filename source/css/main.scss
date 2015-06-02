@@ -5,14 +5,15 @@
  * ========================================================================== */
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic);
-    
+
 @import "_font-awesome-includes"; // Font Awesome icon library
 @import "_variables-greyscale";   // Import for theme
 @import "_variables";             // Bootstrap variable overrides
 @import "_mixins";                // Custom mixins
 @import "_globals";               // Global elements
 @import "_bootstrap-includes";    // Bootstrap core
-@import "Wallpaper";
+@import "mapbox.js/mapbox.uncompressed"; // includes leaflet
+@import "formstone/dist/css/background";
 @import "_greyscale";             // Import for theme
 @import "_scroll";
 
