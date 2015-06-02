@@ -18,7 +18,7 @@ html.no-js
       meta content="#{current_page.data.meta_description}" name="description"
     - else
       meta content="#{site_description}" name="description"
-      
+
     link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png"
     link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png"
     link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png"
@@ -39,7 +39,10 @@ html.no-js
     == partial "partials/navigation"
     == partial "partials/header"
     == yield
+
     #map
+
+    / #map
       / umap.openstreetmap.fr/en/map/anonymous-edit/25257%3ALW2bW4pU6xuvaOMyWNOiH_EtW6o
       iframe width="100%" height="300px" frameBorder="0" src="http://umap.openstreetmap.fr/en/map/lyon_25257?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&datalayersControl=false&onLoadPanel=undefined#6/45.7566/4.8391"
     / Footer
@@ -47,11 +50,15 @@ html.no-js
       .container.text-center
         p Copyright &copy; Robert Riemann #{Date.today.year}
         p
+          ' Cover Picture
+          a> href="http://www.projectyose.com/" Project Yosemite
+          a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" Creative Commons by-nc-nd 3.0
+        p
           ' LHC Tunnel Photo
           a> href="https://www.flickr.com/photos/mamboman/2396881866"  Rainer Hungershausen/Flickr
           a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" Creative Commons by-nc-sa 2.0
-        p
-          ' Intro Video 
+        / p
+          ' Intro Video
           a> href="https://www.youtube.com/watch?v=fb4dpcIYTrc" Luke Shepard/Youtube
           a href="https://www.youtube.com/static?template=terms" Standard Youtube-License
         p
@@ -59,6 +66,13 @@ html.no-js
           a> href="http://blackfyre.github.io/grayscale-sass/" Grayscale
           | by blackyre/github
     == javascript_include_tag "main.js"
+    /! MapBox
+    javascript:
+      L.mapbox.accessToken = "#{ENV['MAPBOX_PUBLIC_KEY']}";
+      var map = L.mapbox.map('map', 'rriemann.m9k2m311');
+
+      map.setView([45.765726, 4.835014], 5 );
+      map.scrollWheelZoom.disable();
     /! Piwik
     javascript:
       var _paq = _paq || [];

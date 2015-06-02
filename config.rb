@@ -23,6 +23,9 @@ require "date"
 # Internationalization
 activate :i18n
 
+# get api keys from ".env" file
+activate :dotenv
+
 # Use relative URLs
 activate :relative_assets
 
