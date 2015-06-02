@@ -4,12 +4,16 @@
 //= require jquery
 //= require jquery.easing/jquery.easing
 //= require jquery.stellar/jquery.stellar
-//= require Wallpaper
+//= require mapbox.js/mapbox.uncompressed
+//= require formstone/dist/js/core
+//= require formstone/dist/js/transition
+//= require formstone/dist/js/background
 
 //= require _bootstrap
 //= require _grayscale
 
-$(".video-bg").wallpaper({
+
+$(".video-bg").background({
   source: {
     // poster: "path/to/poster.jpg",
     // video: "//www.youtube.com/embed/vLUNWYt3q1w"
