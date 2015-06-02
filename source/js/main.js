@@ -24,4 +24,19 @@ $(".video-bg").background({
   }
 });
 
-// $.stellar();
+/*
+$( "#toggle-video" ).click(function() {
+  $("#toggle-icon").toggleClass("fa-play");
+  $("#toggle-icon").toggleClass("fa-pause");
+
+  if($("#toggle-icon").hasClass("fa-play")){
+    $(".video-bg").background("pause");
+  } else {
+    $(".video-bg").background("play");
+  }
+});
+*/
+
+$.stellar({
+  horizontalScrolling: false
+});

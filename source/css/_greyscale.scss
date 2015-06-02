@@ -135,6 +135,8 @@ a {
   padding: 50px 0;
   color: $grayscale-light;
   background: $grayscale-dark url(../img/2396881866_desy.jpg) no-repeat scroll center center;
+  background-attachment: fixed;
+  background-position: 50% 0;
   @include background-size(cover);
 }
 .background-empty {
