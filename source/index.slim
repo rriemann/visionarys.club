@@ -3,12 +3,12 @@ changefreq: weekly
 priority: 1
 ---
 / Navigation
-nav.navbar.navbar-custom.navbar-fixed-top role="navigation" 
+nav.navbar.navbar-custom.navbar-fixed-top role="navigation"
   .container
     .navbar-header
-      button.navbar-toggle data-target=".navbar-main-collapse" data-toggle="collapse" type="button" 
+      button.navbar-toggle data-target=".navbar-main-collapse" data-toggle="collapse" type="button"
         i.fa.fa-bars
-      a.navbar-brand.page-scroll href="#page-top" 
+      a.navbar-brand.page-scroll href="#page-top"
         i.fa.fa-play-circle>
         span.light> Visionary's
         span.text-primary Club
@@ -17,25 +17,26 @@ nav.navbar.navbar-custom.navbar-fixed-top role="navigation"
       ul.nav.navbar-nav
         / Hidden li included to remove active class from about link when scrolled up past about section
         li.hidden
-          a href="#page-top" 
+          a href="#page-top"
         li
           a.page-scroll href="#idea" Idea
         li
           a.page-scroll href="#network" Network
-        li
+        / li
           a.page-scroll href="#news" News
         li
           a.page-scroll href="#contact" Contact
-        / li.dropdown
-          a.page-scroll.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-expanded="false"
-            i.fa.fa-flag>
-            ' LANG
+        li.dropdown
+          a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+            i.fa.fa-globe>
+            ' Language
             span.caret
           ul.dropdown-menu role="menu"
             li: a href="#" English
             li: a href="#" Français
             li: a href="#" Deutsch
-          
+            li: a href="#" Italiano
+
 header.video-bg
   .intro-video.intro-dark-bg.container
     .overlay
@@ -45,7 +46,7 @@ header.video-bg
           span.light> Visionary’s
           span.text-primary Club
         hr.light/
-        .carousel.slide data-ride="carousel" 
+        .carousel.slide data-ride="carousel"
           .carousel-inner
             .item.active
               h4 cosmopolitian debate club in Lyon
@@ -53,8 +54,11 @@ header.video-bg
               h4 interdisciplinary | international | intergenerational
             .item
               h4 independent | tolerant | community-driven
-        a.btn.btn-scroll-light.page-scroll.sink href="#idea" 
-            i.fa.fa-angle-double-down
+        a.btn.btn-scroll-light.page-scroll.sink href="#idea"
+          i.fa.fa-angle-double-down
+/ .container.hidden-xs style="height: 50px; margin-top: -50px; z-index: 2;"
+  button.btn.btn-default.btn-sm.pull-right#toggle-video style="border-color: #fff; color: #fff;" type="button"
+    i.fa.fa-pause#toggle-icon
 
 
 / Idea Section
@@ -64,21 +68,21 @@ section#idea.content-section
       .col-lg-8.col-lg-offset-2
         markdown:
           ## Idea
-          
+
           *The Visionary’s Club is a losely organised forum of people from different
           origins and professions mostly living in Lyon, that meet once in a while
           to exchange their ideas, learn from each other and broaden their view.*
-          
+
           There are quite a few possibilities to exchange ideas and discuss opinions.
           There are political parties and their junior sections, there are university
           associations, there are commercial and community conferences, open stage
           events hosted by your local hackspace and civil lobby associations for
           environmental protections, civil participation, more democracy and so on.
-          
+
           That's nice to have. However, often the participants share the same
           background or have made otherwise similar experiences. Think of meetings,
           or parties with most people from the same school or community.
-          
+
           Driven by the academic interest to broaden our perspective, we want to
           propose meetings of people that have made different experiences and speak
           about somehow political, philosophical or otherwise interesting matters.
@@ -86,19 +90,19 @@ section#idea.content-section
 
 / Network Section
 section#network.content-section
-  .background-img data-stellar-background-ratio="0.5"
+  .background-img data-stellar-background-ratio="0.55"
     .container: .row
       .col-lg-8.col-lg-offset-2
         markdown:
           ## Network
-          
+
           The central tool to propose, discuss and organise meetings is our [forum]
           that is based on the [Discourse] free open-source software and uses
           state-of-the-art technologies to enable well-structured conversations.
-          
+
           The forum follows the best-afford principle to garantee a maximum of
           privacy:
-          
+
           - hosted by [online.net] in France and subject to French and European law
           - invite-only community based on trust that grows reasonable slow
           - notifications mails sent by [mailjet] from France with no tracking
@@ -106,26 +110,26 @@ section#network.content-section
           - private conversations for members-only, public news and announcements
           - no Facebook, Google or Twitter required to join the conversation
           - no advertisements, no Google analytics
-          
+
           We ask you for your mail address and your real name.
-          
+
           [Visit Forum][forum]{:.btn.btn-default}
-          
+
           [forum]: https://forum.visionarys.club
           [Discourse]: http://discourse.org/
           [online.net]: http://labs.online.net/
           [mailjet]: https://www.mailjet.com/
 
 / News Section
-section#news.content-section
+/ section#news.content-section
   .background-empty
     .container: .row
       .col-lg-8.col-lg-offset-2
         markdown:
           ## News
-          
+
           *no news so far*
-            
+
 / Contact Section
 section#contact.content-section
   .background-empty
@@ -133,25 +137,25 @@ section#contact.content-section
       .col-lg-8.col-lg-offset-2
         markdown:
           ## Contact
-        
+
           Send us a mail to
           [mail@visionarys.club](mailto:mail@visionarys.club) or contact us
           on Twitter or Google+.
 
         ul.list-inline.banner-social-buttons
           li
-            a.btn.btn-default.btn-lg href="mailto:mail@visionarys.club" 
+            a.btn.btn-default.btn-lg href="mailto:mail@visionarys.club"
               i.fa.fa-envelope-o.fa-fw
               span.network-name Mail
           li
-            a.btn.btn-default.btn-lg href="https://twitter.com/visionarysclub" 
+            a.btn.btn-default.btn-lg href="https://twitter.com/visionarysclub"
               i.fa.fa-twitter.fa-fw
               span.network-name Twitter
           / li
-            a.btn.btn-default.btn-lg href="https://github.com/IronSummitMedia/startbootstrap" 
+            a.btn.btn-default.btn-lg href="https://github.com/IronSummitMedia/startbootstrap"
               i.fa.fa-github.fa-fw
               span.network-name Github
           li
-            a.btn.btn-default.btn-lg href="https://plus.google.com/108257257777211877738/" 
+            a.btn.btn-default.btn-lg href="https://plus.google.com/108257257777211877738/"
               i.fa.fa-google-plus.fa-fw
               span.network-name Google+
