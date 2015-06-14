@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-source 'https://rails-assets.org'
 
 # Core
 gem "middleman", "3.3.7"
