@@ -1,6 +1,4 @@
-source "https://rubygems.org"
-source 'https://rails-assets.org'
-
+source 'https://rubygems.org'
 # Core
 gem "middleman", "3.3.7"
 
@@ -8,12 +6,13 @@ gem "middleman", "3.3.7"
 gem "bootstrap-sass", "~> 3.3.4", require: false
 gem "font-awesome-middleman", "~> 4.2.3"
 
-source 'https://rails-assets.org' do
+source 'https://rails-assets.org' do  
   gem 'rails-assets-mapbox.js', '~> 2.1.9', require: false
-  gem "rails-assets-jquery.easing", "~> 1.3.1", require: false
-  gem 'rails-assets-Hover', '~> 1.0.9', require: false
-  gem 'rails-assets-formstone', '~> 0.6.1', require: false
-  gem 'rails-assets-jquery.stellar', '~> 0.6.2', require: false
+  
+  gem 'rails-assets-jquery.scrollex', require: false
+  gem 'rails-assets-skel', '~> 3.0.0.dev', require: false
+  gem 'rails-assets-html5shiv', '~> 3.6.2', require: false
+  gem 'rails-assets-respond', require: false
 end
 
 gem "middleman-favicon-maker", "~> 3.7"

@@ -1,91 +1,84 @@
 doctype html
-/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7"
-/[if IE 7] <html class="no-js lt-ie9 lt-ie8"
-/[if IE 8] <html class="no-js lt-ie9"
-html.no-js
+/!
+  | Landed by HTML5 UP
+  | html5up.net | @n33co
+  | Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+html
   head
-    meta charset="UTF-8"
-    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
-    meta content="width=device-width, initial-scale=1" name="viewport"
-    meta content="index,follow" name="robots"
-    / Check frontmatter title; fallback to value in config.rb
-    - if current_page.data.title
-      title #{site_title} | #{current_page.data.title}
-    - else
-      title #{site_title}
-    / Check frontmatter meta description; fallback to value in config.rb
-    - if current_page.data.meta_description
-      meta content="#{current_page.data.meta_description}" name="description"
-    - else
-      meta content="#{site_description}" name="description"
-
-    link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png"
-    link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png"
-    link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png"
-    link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png"
-    link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"
-    == "\n"
-    == "\n"
-    link rel="icon" type="image/ico" sizes="16x16" href="/favicon.ico"
-    link rel="shortcut icon" type="image/png" href="/favicon.png"
-    / Canonical URL
-    link href="#{site_url+current_page.url}" rel="canonical"
-    == stylesheet_link_tag "main", media: :all
-
-  body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
+    title= current_page.data.title
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
     /[if lte IE 8]
-      p.chromeframe.alert.alert-warning
-        | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    == partial "partials/navigation"
-    == partial "partials/header"
-    == yield
-
-    #map
-
-    / #map
-      / umap.openstreetmap.fr/en/map/anonymous-edit/25257%3ALW2bW4pU6xuvaOMyWNOiH_EtW6o
-      iframe width="100%" height="300px" frameBorder="0" src="http://umap.openstreetmap.fr/en/map/lyon_25257?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&datalayersControl=false&onLoadPanel=undefined#6/45.7566/4.8391"
-    / Footer
-    footer
-      .container.text-center
-        p Copyright &copy; Robert Riemann #{Date.today.year}
-        p
-          ' Cover Picture
-          a> href="http://www.projectyose.com/" Project Yosemite
-          a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" Creative Commons by-nc-nd 3.0
-        p
-          ' LHC Tunnel Photo
-          a> href="https://www.flickr.com/photos/mamboman/2396881866"  Rainer Hungershausen/Flickr
-          a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" Creative Commons by-nc-sa 2.0
-        / p
-          ' Intro Video
-          a> href="https://www.youtube.com/watch?v=fb4dpcIYTrc" Luke Shepard/Youtube
-          a href="https://www.youtube.com/static?template=terms" Standard Youtube-License
-        p
-          ' Template
-          a> href="http://blackfyre.github.io/grayscale-sass/" Grayscale
-          | by blackyre/github
-    == javascript_include_tag "main.js"
-    /! MapBox
-    javascript:
-      L.mapbox.accessToken = "#{ENV['MAPBOX_PUBLIC_KEY']}";
-      var map = L.mapbox.map('map', 'rriemann.m9k2m311');
-
-      map.setView([45.765726, 4.835014], 5 );
-      map.scrollWheelZoom.disable();
-    /! Piwik
-    javascript:
-      var _paq = _paq || [];
-      _paq.push(['setDoNotTrack', true]);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://rriemann.rigel.uberspace.de/piwik/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 3]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-    noscript
-      p: img src="//rriemann.rigel.uberspace.de/piwik/piwik.php?idsite=3" style="border:0;" alt=""
-    /! End Piwik Code
+      == javascript_include_tag "ie/html5shiv.js"
+    == stylesheet_link_tag "main", media: :all
+    /[if lte IE 9]
+      == stylesheet_link_tag "ie9", media: :all
+    /[if lte IE 8]
+      == stylesheet_link_tag "ie8", media: :all
+  body.landing class="#{page_classes}"
+    #page-wrapper
+      /! Header
+      header#header
+        h1#logo
+          a href="index.html"  Landed
+        nav#nav
+          ul
+            li
+              a href="index.html"  Home
+            li
+              a href="#"  Layouts
+              ul
+                li
+                  a href="left-sidebar.html"  Left Sidebar
+                li
+                  a href="right-sidebar.html"  Right Sidebar
+                li
+                  a href="no-sidebar.html"  No Sidebar
+                li
+                  a href="#"  Submenu
+                  ul
+                    li
+                      a href="#"  Option 1
+                    li
+                      a href="#"  Option 2
+                    li
+                      a href="#"  Option 3
+                    li
+                      a href="#"  Option 4
+            li
+              a href="elements.html"  Elements
+            li
+              a.button.special href="#"  Sign Up
+      == yield
+      /! Footer
+      footer#footer
+        ul.icons
+          li
+            a.icon.alt.fa-twitter href="#" 
+              span.label Twitter
+          li
+            a.icon.alt.fa-facebook href="#" 
+              span.label Facebook
+          li
+            a.icon.alt.fa-linkedin href="#" 
+              span.label LinkedIn
+          li
+            a.icon.alt.fa-instagram href="#" 
+              span.label Instagram
+          li
+            a.icon.alt.fa-github href="#" 
+              span.label GitHub
+          li
+            a.icon.alt.fa-envelope href="#" 
+              span.label Email
+        ul.copyright
+          li &copy; Untitled. All rights reserved.
+          li
+            | Design:
+            a href="http://html5up.net"  HTML5 UP
+        
+    /! Scripts    
+    == javascript_include_tag "vendor"
+    /[if lte IE 8]
+      == javascript_include_tag "ie/respond"
+    == javascript_include_tag "main"
