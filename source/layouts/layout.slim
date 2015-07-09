@@ -20,14 +20,11 @@ html
       /! Header
       header#header
         h1#logo
-          a href="/"          
-            i.fa.fa-play-circle>
-            span.light> Visionary's
-            span.text-primary Club
+          a href="index.html"  Landed
         nav#nav
           ul
             li
-              a href="/"  Home
+              a href="index.html"  Home
             li
               a href="#"  Layouts
               ul
@@ -85,9 +82,3 @@ html
     /[if lte IE 8]
       == javascript_include_tag "ie/respond"
     == javascript_include_tag "main"
-    javascript:
-      L.mapbox.accessToken = "#{ENV['MAPBOX_PUBLIC_KEY']}";
-      var map = L.mapbox.map('map', 'rriemann.mf2854j3');
-
-      map.setView([45.765726, 4.835014], 5 );
-      map.scrollWheelZoom.disable();
