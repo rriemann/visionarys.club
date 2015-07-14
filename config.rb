@@ -6,9 +6,6 @@ set :fonts_dir,             'fonts'
 # Slim template engine
 require 'slim'
 
-# explicit require of sass as suggested by 'tilt'
-require 'sass'
-
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -50,6 +47,20 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+  
+    # Make favicons
+  # use: https://github.com/follmann/middleman-favicon-maker
+  activate :favicon_maker, :icons => {
+    "favicon_base.png" =>   [
+      { icon: "apple-touch-icon-114x114-precomposed.png" },
+      { icon: "apple-touch-icon-72x72-precomposed.png" },
+      { icon: "apple-touch-icon-57x57-precomposed.png" },
+      { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
+      { icon: "apple-touch-icon.png", size: "57x57" },
+      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon.ico", size: "16x16" },
+    ]
+  }
 end
 
 # work-around to remove copies of font-awesome files. Where are they pulled in?

@@ -1,8 +1,7 @@
 doctype html
 /!
-  | Landed by HTML5 UP
-  | html5up.net | @n33co
-  | Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Theme Landed by HTML5 UP | html5up.net | @n33co | Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  https://github.com/rriemann/html5-up-landed-middleman4
 html
   head
     title= current_page.data.title
@@ -15,18 +14,29 @@ html
       == stylesheet_link_tag "ie9", media: :all
     /[if lte IE 8]
       == stylesheet_link_tag "ie8", media: :all
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png"
+    link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"
+    == "\n"
+    == "\n"
+    link rel="icon" type="image/ico" sizes="16x16" href="/favicon.ico"
+    link rel="shortcut icon" type="image/png" href="/favicon.png"
   body.landing class="#{page_classes}"
     #page-wrapper
       /! Header
       header#header
-        h1#logo
-          a href="index.html"  Landed
+        h1#logo.logo-font
+          a href="/"
+            ' Visionary’s
+            span.club Club
         nav#nav
           ul
             li
-              a href="index.html"  Home
-            li
-              a href="#"  Layouts
+              a href="/" English
+            / li
+              a href="#" Layouts
               ul
                 li
                   a href="left-sidebar.html"  Left Sidebar
@@ -45,36 +55,36 @@ html
                       a href="#"  Option 3
                     li
                       a href="#"  Option 4
-            li
+            / li
               a href="elements.html"  Elements
             li
-              a.button.special href="#"  Sign Up
+              a.button.special href="//forum.visionarys.club"  Forum
       == yield
       /! Footer
       footer#footer
         ul.icons
           li
-            a.icon.alt.fa-twitter href="#" 
+            a.icon.alt.fa-twitter href="//twitter.com/visionarysclub" 
               span.label Twitter
           li
-            a.icon.alt.fa-facebook href="#" 
+            a.icon.alt.fa-facebook href="//www.facebook.com/groups/1459113161005609" 
               span.label Facebook
-          li
+          / li
             a.icon.alt.fa-linkedin href="#" 
               span.label LinkedIn
-          li
+          / li
             a.icon.alt.fa-instagram href="#" 
               span.label Instagram
-          li
+          / li
             a.icon.alt.fa-github href="#" 
               span.label GitHub
           li
-            a.icon.alt.fa-envelope href="#" 
+            a.icon.alt.fa-envelope href="mailto:mail@visionarys.club" 
               span.label Email
         ul.copyright
-          li &copy; Untitled. All rights reserved.
+          li &copy; Robert Riemann 2015
           li
-            | Design:
+            ' Design:
             a href="http://html5up.net"  HTML5 UP
         
     /! Scripts    

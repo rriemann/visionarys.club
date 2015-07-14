@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/follmann/middleman-favicon-maker.git
+  revision: 63a1fe6d2f3f621b8156b355fe432e3198071a5d
+  branch: master
+  specs:
+    middleman-favicon-maker (4.0.0.beta.1)
+      favicon_maker (~> 1.3)
+      middleman-core (~> 4.0.beta)
+
+GIT
   remote: https://github.com/middleman/middleman.git
   revision: 1efe6a27c55f92f5a1ebdf5c7889490c65bbf24a
   branch: master
@@ -67,6 +76,7 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     contracts (0.9)
+    docile (1.1.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -75,6 +85,8 @@ GEM
     execjs (2.5.2)
     fastimage (1.6.8)
       addressable (~> 2.3, >= 2.3.5)
+    favicon_maker (1.3)
+      docile (~> 1.1)
     ffi (1.9.8)
     font-awesome-sass (4.3.2.1)
       sass (~> 3.2)
@@ -166,6 +178,7 @@ PLATFORMS
 DEPENDENCIES
   font-awesome-sass
   middleman!
+  middleman-favicon-maker!
   middleman-jquery
   middleman-livereload
   rails-assets-Hover (~> 1.0.9)!
@@ -177,6 +190,7 @@ DEPENDENCIES
   rails-assets-mapbox.js (~> 2.1.9)!
   rails-assets-respond!
   rails-assets-skel (~> 3.0.0.dev)!
+  sass
   slim
   tzinfo-data
   wdm (~> 0.1.0)

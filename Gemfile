@@ -11,6 +11,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 # gem 'middleman', '~> 4.0.0.beta.2'
 gem 'middleman', :git => 'https://github.com/middleman/middleman.git', :branch => 'master'
+gem 'middleman-favicon-maker', :git => 'https://github.com/follmann/middleman-favicon-maker.git', :branch => 'master'
 gem 'middleman-livereload'
 
 
@@ -18,6 +19,9 @@ gem 'middleman-jquery'
 gem 'font-awesome-sass', require: false
 
 gem 'slim'
+# explicit require of sass as suggested by 'tilt'
+# https://stackoverflow.com/questions/6091865/sass-in-a-non-thread-safe-way
+gem 'sass', :require => 'sass'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-mapbox.js', '~> 2.1.9', require: false
