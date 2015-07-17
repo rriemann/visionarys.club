@@ -13,6 +13,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', :git => 'https://github.com/middleman/middleman.git', :branch => 'master'
 gem 'middleman-favicon-maker', :git => 'https://github.com/follmann/middleman-favicon-maker.git', :branch => 'master'
 gem 'middleman-livereload'
+gem 'middleman-minify-html'
 
 
 gem 'middleman-jquery'

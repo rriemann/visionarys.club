@@ -25,6 +25,19 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 ###
+# Localization settings
+###
+
+activate :i18n
+
+ready do
+  I18n.available_locales = [:en, :fr]
+  I18n.available_locales.each do |locale|
+    proxy "/#{locale.to_s}/.htaccess", "lang.htaccess", locals: {locale: locale}, ignore: true, layout: false
+  end
+end
+
+###
 # Helpers
 ###
 
@@ -42,6 +55,8 @@ end
 
 # Build-specific configuration
 configure :build do
+  # activate :minify_html
+  
   # Minify CSS on build
   activate :minify_css
 
@@ -62,6 +77,15 @@ configure :build do
     ]
   }
 end
+
+# activate :deploy do |deploy|
+#   deploy.method = :rsync
+#   deploy.host   = "rriemann.rigel.uberspace.de"
+#   deploy.path   = "/var/www/virtual/rriemann/visionarys.club"
+#   # deploy.build_before = true # default: false
+#   # deploy.method   = :ftp
+#   deploy.clean = true # remove orphaned files on remote host, default: false
+# end
 
 # work-around to remove copies of font-awesome files. Where are they pulled in?
 after_build do |builder|
