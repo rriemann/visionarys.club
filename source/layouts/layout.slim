@@ -28,13 +28,14 @@ html
       /! Header
       header#header
         h1#logo.logo-font
-          a href="/"
+          a href="/#{I18n.locale.to_s}/"
             ' Visionary’s
             span.club Club
         nav#nav
           ul
-            li
-              a href="/" English
+            - I18n.available_locales.each do |locale|
+              li
+                a href="/#{locale}/"= I18n.t :language, locale: locale
             / li
               a href="#" Layouts
               ul
@@ -58,7 +59,7 @@ html
             / li
               a href="elements.html"  Elements
             li
-              a.button.special href="//forum.visionarys.club"  Forum
+              a.button.special href="//forum.visionarys.club"= t 'forum'
       == yield
       /! Footer
       footer#footer

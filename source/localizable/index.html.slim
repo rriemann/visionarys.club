@@ -10,47 +10,23 @@ section#banner
         span.club Club
       p= I18n.t 'subtitle'
     span.image
-      img alt="Plato and Aristotle" src="img/Sanzio_01_Plato_Aristotle.small.jpg" /
+      img alt="Plato and Aristotle" src="/img/Sanzio_01_Plato_Aristotle.small.jpg" /
   a.goto-next.scrolly href="#one"  Next
 /! One
 section#one.spotlight.style1.bottom
   span.image.fit.main
-    img alt="" src="img/20120521-yosemite-327.jpg" /
+    img alt="" src="/img/20120521-yosemite-327.jpg" /
   .content
     .container
       .row
         .4u class="12u$(medium)" 
-          header
-            h2 Meet and discuss in informal atmosphere
-            p  a debate club to open your mind
-          p
-            |
-              The Visionary’s Club is a loosely organised forum of people from different
-              origins and professions mostly living in Lyon, that meet once in a while to
-              exchange their ideas, learn from each other and broaden their view.
+          header= mdt 'index.presentation.opener'
+          = mdt 'index.presentation.definition'
         .4u class="12u$(medium)"
-          h5 interdisciplinary | international | intergenerational
-          p
-            |
-              In order to enrich the encounters, we aim to integrate open minds
-              that have made different experiences or think differently.
-          p
-            |
-              That is why we seek to welcome people that pursued different
-              formations in different countries. A priori, the debates will
-              be held in French and English, but on request, this might be put to a
-              vote.
+          = mdt 'index.presentation.inter'
               
-        div class=("4u$ 12u$(medium)") 
-          h5 independent | tolerant | community-driven
-          p
-            |
-              The encounters shall not be claimed by a political idea or a
-              particular interest (least of all a financial one). There is
-              not a need to agree on something. Apart from logistical aspects,
-              the club is self-governed by its members. Therefore, the club
-              endorses the principles of transparency and bottom-up decision-making.
-              The encounters are not chaired in the hope that everyone is well-behaved. 
+        div class=("4u$ 12u$(medium)")
+          = mdt 'index.presentation.open'
           span style="font-size:0.8em": markdown:
             Photo Credits: [Project Yosemite](http://www.projectyose.com/)
               
@@ -60,29 +36,14 @@ section#one.spotlight.style1.bottom
 section#two.spotlight.style2.left
   span.image.fit.main
     /! credit: https://www.flickr.com/photos/7142995@N07/15928166407/in/album-72157646877615513/
-    img alt="" src="img/lyon-amphitheatre.jpg"
+    img alt="" src="/img/lyon-amphitheatre.jpg"
   .content
-    header
-      h2 Locations
-      p cosy encounters right at your place
-    markdown:
-      There is no office. The encounters are taking place in the apartments
-      proposed by its members or outdoors. While the apartments offer only
-      place for a limited number of participants,
-      [Lyon’s Roman open-air theatre](https://en.wikipedia.org/wiki/Ancient_Theatre_of_Fourvi%C3%A8re)
-      has a comfortable size for about 10 000 people.
-      
-      However, we are in favour
-      of small meetings, so that everyone gets the chance to get to known and talk
-      to all other participants.
+    header= mdt 'index.location.opener'
+    = mdt 'index.location.text'
       
     span style="font-size: 0.8em": markdown:
       Photo Credits: [Flickr/Jean-Michel SANGLERAT](https://www.flickr.com/photos/7142995@N07/15928166407/in/album-72157646877615513/)
 
-      
-    / ul.actions
-      li
-        a.button href="#"  Learn More
   a.goto-next.scrolly href="#three"  Next
 
 /! Three
@@ -90,118 +51,61 @@ section#three.spotlight.style3.right
   span.image.fit.main.bottom
     img alt="" src="/img/discourse.jpg"
   .content
-    header
-      h2 Organisation
-      p private online community platform
-    markdown:
-      To ease the organisation, a next-generation forum is made available to all known members.
-      It is used to share *interesting* links, propose new topics, gather feed-back,
-      find the next revenue and send invitations.
-      
-      To get access to the private forum, you need to receive an invitation from
-      an existing member or get in contact with us, e.g. per
-      [mail](mailto:mailto:mail@visionarys.club?subject=invitation).
-      The forum is in fact part of a trial to provide a privacy-aware solution.
+    header= mdt 'index.platform.opener'
+    = mdt 'index.platform.text'
     ul.actions
       li
-        a.button.small.special href="//forum.visionarys.club" Forum
+        a.button.small.special href="//forum.visionarys.club"= t 'forum'
       li
-        a.button.small.special href="/privacy" About Privacy
+        a.button.small.special href="/privacy"= t 'index.platform.about_privacy'
   a.goto-next.scrolly href="#four" Next
 
-  /! Four
+/! Four
 section#four.wrapper.style1.special.fade-up
   .container
-    header.major
-      h2 Get involved and become part of this project!
-      / p There are only advantages.
+    header.major= mdt 'index.get_involved.opener'
     .box.alt
       .row.uniform
         section.4u class=("6u(medium) 12u$(xsmall)") 
           span.icon.alt.major.fa-users
-          markdown:
-            ### Make new Friends
-            
-            Meet people that share your <strike>opinion</strike> interests
-            and make new friends!
+          = mdt 'index.get_involved.friends'
         section.4u class=("6u$(medium) 12u$(xsmall)") 
           span.icon.alt.major.fa-comment
-          markdown:
-            ### Share your Ideas
-          
-            For a vivid discussion, it is important to get everyone involved.
-            Become active and contribute to the discussion. You are a listener and speaker!     
+          = mdt 'index.get_involved.ideas'
         section class=("4u$ 6u(medium) 12u$(xsmall)") 
           span.icon.alt.major.fa-calendar
-          markdown:
-            ### Propose your own Events
-            
-            Get active and propose a topic you find interesting. It doesn’t have
-            to be a debate, we are open for film projections, theatre shows, etc.
-            
+          = mdt 'index.get_involved.events'        
         section.4u class=("6u$(medium) 12u$(xsmall)") 
           span.icon.alt.major.fa-thumbs-up
-          markdown:
-            ### Have Fun
-            
-            Gatherings should not feel like work. It’s our free time and it should
-            be a pleasure.
-            
+          = mdt 'index.get_involved.fun'      
         section.4u class=("6u(medium) 12u$(xsmall)") 
           span.icon.alt.major.fa-language
-          markdown:
-            ### Speak foreign Languages
-            
-            If you want so, you can take the gatherings as an occasion to improve
-            your foreign language skills.
+          = mdt 'index.get_involved.languages'
         section class=("4u$ 6u$(medium) 12u$(xsmall)") 
           span.icon.alt.major.fa-lock
-          markdown:
-            ### Privacy-Aware Forum
-          
-            No need here for a Facebook, Twitter or Google-Account to participate.
-            We are in favour for decentralisation.
+          = mdt 'index.get_involved.privacy'
     /! footer.major
       ul.actions
         li
           a.button href="#"  Magna sed feugiat
-          
-/ section.wrapper.style1.special.fade#map style="height: 400px; width: 100%;"
           
 /! Five
 section#five.wrapper.style2.fade
   .container
     .row   
       .4u class="12u$(medium)" 
-        header
-          h2 Procedure of Registration
-          p invite-only | marketing buzz
-        markdown:
-          First of all, there is no formal registration as the Visionary’s Club is
-          an informal forum. Member is considered everyone with a forum account to
-          receive invitations and propose encounters.
+        header= mdt 'index.registration.opener'
+        = mdt 'index.registration.members'
       .4u class="12u$(medium)"
-        h5 Get Invited
-        markdown:          
-          When speaking out own beliefs and ideas, it is important to have a certain
-          degree of trust in the audience. This is accomplished by inviting only
-          existing members that can bring along trusted invitees who will offered
-          an account after the first meeting if they with so.
-          
-          If you do not know any members, do not hesitate to write a
-          mail or a tweet.
+        = mdt 'index.registration.invitation'
 
       .4u class="12u$(medium)"
-        h5 Marketing Buzz
-        markdown:
-          We do not want to convince people to join the project. We want to become
-          discovered. Generally, we refrain from advertising publicly. However, if
-          you like this project, please tell your friends and bring them with you.
+        = mdt 'index.registration.marketing'
         ul.actions
           li
-            a.button.small.special href="mailto:mail@visionarys.club" Send Mail
+            a.button.small.special href="mailto:mail@visionarys.club" = t 'index.registration.send_mail'
           li
-            a.button.small.special href="//twitter.com/visionarysclub" Send Tweet
+            a.button.small.special href="//twitter.com/visionarysclub" = t 'index.registration.send_tweet'
       
       
       

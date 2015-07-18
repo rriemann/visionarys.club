@@ -1,10 +1,10 @@
 ---
-fr:
-  title: Club des Visionnaires
-  subtitle: club de débat cosmopolite à Lyon
-  language: français
+de:
+  title: Club der Visionäre
+  subtitle: Internationaler Debattierklub in Lyon
+  language: deutsch
   credits:
-    photo: Photo Credits
+    photo: Photo von
   forum: Forum
   index:
     presentation:
@@ -69,7 +69,7 @@ fr:
       opener: >
         ## Get involved and become part of this project!
       friends: >
-        ### Make new Friends
+        ### Finde neue Freunde
         
         Meet people that share your <strike>opinion</strike> interests
         and make new friends!

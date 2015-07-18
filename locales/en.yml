@@ -1,4 +1,127 @@
 ---
 en:
-  hello: "Hello world"
-  subtitle: "Cosmopolitan Debate Club in Lyon"
+  title: Visionary’s Club
+  subtitle: Cosmopolitan Debate Club in Lyon
+  language: english
+  credits:
+    photo: Photo Credits
+  forum: Forum
+
+  index:
+    presentation:
+      opener: >
+        ## Meet and discuss in informal atmosphere
+        
+        a debate club to open your mind
+      definition: >
+        The Visionary’s Club is a loosely organised forum of people from different
+        origins and professions mostly living in Lyon, that meet once in a while to
+        exchange their ideas, learn from each other and broaden their view.
+      inter: >
+        ##### interdisciplinary | international | intergenerational
+
+        In order to enrich the encounters, we aim to integrate open minds
+        that have made different experiences or think differently.
+
+        That is why we seek to welcome people that pursued different
+        formations in different countries. A priori, the debates will
+        be held in French and English, but on request, this might be put to a
+        vote.
+      open: >
+        ##### independent | tolerant | community-driven
+
+        The encounters shall not be claimed by a political idea or a
+        particular interest (least of all a financial one). There is
+        not a need to agree on something. Apart from logistical aspects,
+        the club is self-governed by its members. Therefore, the club
+        endorses the principles of transparency and bottom-up decision-making.
+        The encounters are not chaired in the hope that everyone is well-behaved.
+    location:
+      opener: >
+        ## Locations
+        
+        cosy encounters right at your place
+      text: >
+        There is no office. The encounters are taking place in the apartments
+        proposed by its members or outdoors. While the apartments offer only
+        place for a limited number of participants,
+        [Lyon’s Roman open-air theatre](https://en.wikipedia.org/wiki/Ancient_Theatre_of_Fourvi%C3%A8re)
+        has a comfortable size for about 10 000 people.
+        
+        However, we are in favour
+        of small meetings, so that everyone gets the chance to get to known and talk
+        to all other participants.
+    platform:
+      opener: >
+        ## Organisation
+        
+        private online community platform
+      text: >
+        To ease the organisation, a next-generation forum is made available to all known members.
+        It is used to share *interesting* links, propose new topics, gather feed-back,
+        find the next revenue and send invitations.
+        
+        To get access to the private forum, you need to receive an invitation from
+        an existing member or get in contact with us, e.g. per
+        [mail](mailto:mailto:mail@visionarys.club?subject=invitation).
+        The forum is in fact part of a trial to provide a privacy-aware solution.
+      about_privacy: About Privacy
+    get_involved:
+      opener: >
+        ## Get involved and become part of this project!
+      friends: >
+        ### Make new Friends
+        
+        Meet people that share your <strike>opinion</strike> interests
+        and make new friends!
+      ideas: >
+        ### Share your Ideas
+      
+        For a vivid discussion, it is important to get everyone involved.
+        Become active and contribute to the discussion. You are a listener and speaker!     
+      events: >
+        ### Propose your own Events
+        
+        Get active and propose a topic you find interesting. It doesn’t have
+        to be a debate, we are open for film projections, theatre shows, etc.
+      fun: >
+        ### Have Fun
+        
+        Gatherings should not feel like work. It’s our free time and it should
+        be a pleasure.
+      languages: >
+        ### Speak foreign Languages
+        
+        If you want so, you can take the gatherings as an occasion to improve
+        your foreign language skills.
+      privacy: >
+        ### Privacy-Aware Forum
+      
+        No need here for a Facebook, Twitter or Google-Account to participate.
+        We are in favour for decentralisation.
+    registration:
+      opener: >
+        ## Procedure of Registration
+        
+        invite-only | marketing buzz
+      members: >
+        First of all, there is no formal registration as the Visionary’s Club is
+        an informal forum. Member is considered everyone with a forum account to
+        receive invitations and propose encounters.
+      invitation: >
+        ##### Get Invited  
+        When speaking out own beliefs and ideas, it is important to have a certain
+        degree of trust in the audience. This is accomplished by inviting only
+        existing members that can bring along trusted invitees who will offered
+        an account after the first meeting if they with so.
+        
+        If you do not know any members, do not hesitate to write a
+        mail or a tweet.
+      marketing: >
+        ##### Marketing Buzz
+
+        We do not want to convince people to join the project. We want to become
+        discovered. Generally, we refrain from advertising publicly. However, if
+        you like this project, please tell your friends and bring them with you.
+      send_mail: Send Mail
+      send_tweet: Send Tweet

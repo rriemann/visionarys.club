@@ -16,6 +16,9 @@ require 'slim'
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/*.htaccess', layout: false
+
+ignore '*.kate-swp'
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -28,12 +31,13 @@ page '/*.txt', layout: false
 # Localization settings
 ###
 
-activate :i18n
+activate :i18n, mount_at_root: false
 
 ready do
-  I18n.available_locales = [:en, :fr]
+  I18n.available_locales = [:en, :fr, :de]
   I18n.available_locales.each do |locale|
-    proxy "/#{locale.to_s}/.htaccess", "lang.htaccess", locals: {locale: locale}, ignore: true, layout: false
+    proxy "/index.html.#{locale}", "localizable/index.html", ignore: true
+    proxy "/#{locale.to_s}/.htaccess", "lang.htaccess", locals: {locale: locale}, ignore: true
   end
 end
 
@@ -47,11 +51,14 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+   def mdt(identifier, options = nil)
+     Kramdown::Document.new(I18n.t identifier, options).to_html
+   end
+  def hello()
+    "hello"
+  end
+end
 
 # Build-specific configuration
 configure :build do
