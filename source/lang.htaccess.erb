@@ -1,7 +1,0 @@
-<FilesMatch .*>
-  Options +SymLinksIfOwnerMatch
-</FilesMatch>
-
-RewriteEngine on
-RewriteRule (.*html) ../$1.<%= locale.to_s %> [L]
-RewriteRule (.*) ../$1
