@@ -6,98 +6,107 @@ de:
   credits:
     photo: Photo von
   forum: Forum
+
   index:
     presentation:
       opener: >
-        ## Meet and discuss in informal atmosphere
+        ## Treffen und Austauschen in informeller Atmosphäre
         
-        a debate club to open your mind
+        ein Debattierkclub um über den Tellerrand zu luken
       definition: >
-        The Visionary’s Club is a loosely organised forum of people from different
-        origins and professions mostly living in Lyon, that meet once in a while to
-        exchange their ideas, learn from each other and broaden their view.
+        Der Club der Visionäre ist ein lose organisiertes Forum von Leuten
+        verschiedener Herkunft und verschiedenen Fachs, die überwiegend in Lyon
+        leben und sich ab und zu treffen um Ideen auszutauschen und von einander
+        zu lernen.
       inter: >
-        ##### interdisciplinary | international | intergenerational
-
-        In order to enrich the encounters, we aim to integrate open minds
-        that have made different experiences or think differently.
-
-        That is why we seek to welcome people that pursued different
-        formations in different countries. A priori, the debates will
-        be held in French and English, but on request, this might be put to a
-        vote.
+        ##### interdisziplinär | international | generationsübergreifend
+        
+        Um die Treffen so interessant und vielseitig wie möglich zu gestalten,
+        sprechen wir uns für die Integration aller Aufgeschlossenen aus
+        unabhängig von Einstellung, Beruf, Herkunft oder Alter.
+        
+        Wir freuen uns über jeden, der mit seinen Erfahrungen den Austausch
+        bereichern möchte. Sprache der Treffen ist zunächst Französisch oder
+        Englisch, jedoch kann dazu im Einzelfall bei Interesse abgestimmt werden.
       open: >
-        ##### independent | tolerant | community-driven
-
-        The encounters shall not be claimed by a political idea or a
-        particular interest (least of all a financial one). There is
-        not a need to agree on something. Apart from logistical aspects,
-        the club is self-governed by its members. Therefore, the club
-        endorses the principles of transparency and bottom-up decision-making.
-        The encounters are not chaired in the hope that everyone is well-behaved.
+        ##### unabhängig | tolerant | gemeinschaftsgelenkt
+        
+        Die Treffen sollen nicht von politischen Ideen oder Eigeninteressen
+        vereinnahmt werden (insbesondere nicht finanzieller Art). Das Ziel
+        darf nicht sein sich schließlich einigen zu müssen. Abgesehen von
+        logistischen Aspekten, wird das Club-Leben von seinen Mitgliedern selbst
+        bestimmt. Dafür legen wir viel wert auf Transparenz und eine selbstbestimmte
+        Gemeinschaft. Unserere Treffen werden nicht moderiert in der Hoffnung, dass
+        sich alle kameradschaftlich verhalten.
     location:
       opener: >
-        ## Locations
+        ## Örtlichkeiten
         
-        cosy encounters right at your place
+        gemütliche Treffen in deiner Nähe
       text: >
-        There is no office. The encounters are taking place in the apartments
-        proposed by its members or outdoors. While the apartments offer only
-        place for a limited number of participants,
-        [Lyon’s Roman open-air theatre](https://en.wikipedia.org/wiki/Ancient_Theatre_of_Fourvi%C3%A8re)
-        has a comfortable size for about 10 000 people.
+        Es gibt keinen Vereinsraum. Treffen finden in den Räumlichkeiten statt,
+        die Mitglieder zur Verfügung stellen können, oder draußen. Während die
+        Wohnungen nur begrenzt Platz bieten, kann das
+        [Römische Amphitheater in Lyon](https://en.wikipedia.org/wiki/Ancient_Theatre_of_Fourvi%C3%A8re%29)
+        komfortabel bis zu 10 000 Leute aufnehmen.
         
-        However, we are in favour
-        of small meetings, so that everyone gets the chance to get to known and talk
-        to all other participants.
+        Jedoch möchten wir die Treffen eher klein halten, so dass jeder die
+        Möglichkeit hat tatsächlich jeden anderen Gast kennen zu lernen und sich mit
+        allen auszutauschen.
     platform:
       opener: >
         ## Organisation
         
-        private online community platform
+        privates Gemeinschaftsforum im Netz
       text: >
-        To ease the organisation, a next-generation forum is made available to all known members.
-        It is used to share *interesting* links, propose new topics, gather feed-back,
-        find the next revenue and send invitations.
+        Zur Vereinfachung der Organisation steht ein modernes Onlineforum
+        allen bekannten Mitglieder zur Verfügung. Es dient dem Austausch
+        von *interessanten* Links, dem Vorschlagen neuer Themen, Umfragen, der Suche
+        des nächsten Treffpunkts und der Versendung von Einladungen.
         
-        To get access to the private forum, you need to receive an invitation from
-        an existing member or get in contact with us, e.g. per
-        [mail](mailto:mailto:mail@visionarys.club?subject=invitation).
-        The forum is in fact part of a trial to provide a privacy-aware solution.
-      about_privacy: About Privacy
+        Um Zugriff auf das private Forum zu bekommen, bedarf es einer Einladung von
+        einem Mitglied. Wenn das nicht möglich ist, schreibe uns eine Nachricht,
+        zum Beispiel per [Mail](mailto:mail@visionarys.club?subject=invitation)
+        Das Forum ist schließlich auch ein Test wie Privatsspähre geschützt werden
+        kann.
+      about_privacy: Mehr zur Privatssphäre
     get_involved:
       opener: >
-        ## Get involved and become part of this project!
+        ## Bringe dich ein und werde Teil des Projekts!
+      
       friends: >
         ### Finde neue Freunde
         
-        Meet people that share your <strike>opinion</strike> interests
-        and make new friends!
+        Treffe Menschen, die deine <strike>Meinung</strike> Interessen teilen und
+        finde neue Freunde!
       ideas: >
-        ### Share your Ideas
+        ### Teile deine Ideen
       
-        For a vivid discussion, it is important to get everyone involved.
-        Become active and contribute to the discussion. You are a listener and speaker!     
+        Für eine lebhafte Debatte ist es wichtig alle Anwesenden einzubeziehen.
+        Werde aktiv und beteilige dich. Du bist Zuhörer und Sprecher!
       events: >
-        ### Propose your own Events
+        ### Schlage eigene Projekte vor
         
-        Get active and propose a topic you find interesting. It doesn’t have
-        to be a debate, we are open for film projections, theatre shows, etc.
+        Schlage ein Thema vor, dass du interessant findest. Es muss nicht
+        unbedingt eine Debatte werden. Wir sind auch offen für Filmvorführungen,
+        Theater, etc.
+
       fun: >
-        ### Have Fun
+        ### Habe Spaß
         
-        Gatherings should not feel like work. It’s our free time and it should
-        be a pleasure.
+        Treffen sollten sich nicht wie Arbeit anfühlen. Es ist unsere Freizeit und
+        es sollte ein Vergnügen sein.
       languages: >
-        ### Speak foreign Languages
+        ### Sprich fremde Sprachen
         
-        If you want so, you can take the gatherings as an occasion to improve
-        your foreign language skills.
+        Wenn du möchtest, dann nutze die Gelegenheit und verbessere deine
+        Fremdsprachenkenntnisse.
+
       privacy: >
-        ### Privacy-Aware Forum
+        ### Datenschutzfreundliches Forum
       
-        No need here for a Facebook, Twitter or Google-Account to participate.
-        We are in favour for decentralisation.
+        Kein Zwang zu Facebook, Twitter oder Google. Wir bevorzugen unsere eigene,
+        dezentrale Lösung.
     registration:
       opener: >
         ## Procedure of Registration
@@ -109,13 +118,13 @@ de:
         receive invitations and propose encounters.
       invitation: >
         ##### Get Invited  
+
         When speaking out own beliefs and ideas, it is important to have a certain
         degree of trust in the audience. This is accomplished by inviting only
         existing members that can bring along trusted invitees who will offered
         an account after the first meeting if they with so.
         
-        If you do not know any members, do not hesitate to write a
-        mail or a tweet.
+        If you do not know any members, do not hesitate to write a  mail or a tweet.
       marketing: >
         ##### Marketing Buzz
 

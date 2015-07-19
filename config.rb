@@ -19,6 +19,8 @@ page '/*.txt', layout: false
 page '/*.htaccess', layout: false
 
 ignore '*.kate-swp'
+ignore '*.directory'
+ignore 'favicon_base.png'
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -36,8 +38,7 @@ activate :i18n, mount_at_root: false
 ready do
   I18n.available_locales = [:en, :fr, :de]
   I18n.available_locales.each do |locale|
-    # proxy "/index.html.#{locale}", "localizable/index.html", ignore: true
-    # proxy "/#{locale.to_s}/.htaccess", "lang.htaccess", locals: {locale: locale}, ignore: true
+    proxy "/#{locale.to_s}/.htaccess", "lang.htaccess", locals: {locale: locale}, ignore: true
   end
 end
 
@@ -94,14 +95,19 @@ end
 #   deploy.clean = true # remove orphaned files on remote host, default: false
 # end
 
-# work-around to remove copies of font-awesome files. Where are they pulled in?
 after_build do |builder|
   require 'fileutils'
   
   build_dir = config[:build_dir]
+  
+  # work-around to remove copies of font-awesome files. Where are they pulled in?
   Dir.glob(build_dir + '/fonts/*wesome*').each { |f| File.delete(f) if File.file? f }
   
+  # work-around to move translated files from /:lang/file to /file.:lang
   I18n.available_locales.each do |locale|
-    FileUtils.ln_s "#{locale}/index.html", "#{build_dir}/index.html.#{locale}"
+    Dir.glob("#{build_dir}/#{locale.to_s}/*.html").each do |file|
+      FileUtils.move file, File.join("#{build_dir}/#{File.basename file}.#{locale}")
+    end
+    # FileUtils.ln_s "#{locale}/index.html", "#{build_dir}/index.html.#{locale}"
   end
 end
